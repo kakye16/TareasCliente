@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 · Caza de objetivos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Caza de objetivos</h1>
+      <p>Pulsa el objetivo y suma puntos en 20 segundos.</p>
+    </header>
+
+    <dl class="marcador">
+      <div>
+        <dt>Puntos</dt>
+        <dd id="puntos">0</dd>
+      </div>
+      <div>
+        <dt>Tiempo</dt>
+        <dd><span id="tiempo">20.0</span> s</dd>
+      </div>
+      <div>
+        <dt>Modo</dt>
+        <dd id="modo">Fácil</dd>
+      </div>
+    </dl>
+
+    <div class="controles">
+      <button id="iniciar" type="button">Comenzar</button>
+    </div>
+    <p id="estado" role="status">Pulsa Comenzar para jugar.</p>
+
+    <section id="tablero" aria-label="Zona de juego">
+      <button id="objetivo" type="button" aria-label="Acertar al objetivo" hidden disabled>+</button>
+    </section>
+
+    <footer>
+      <span id="ventana">Ventana: —</span>
+    </footer>
+  </main>
+</body>
+
+</html>

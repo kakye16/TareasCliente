@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f3f5;
+  color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.tienda-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+}
+
+.tienda-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tienda-header h1 {
+  font-size: 2rem;
+  color: #1d3557;
+}
+
+.tienda-header p {
+  color: #6c757d;
+}
+
+.panel-producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .panel-producto {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Visor e imagen */
+.imagen-contenedor {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.imagen-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.placa {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.instruccion-miniaturas {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 15px;
+}
+
+.galeria-miniaturas {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.miniatura {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.miniatura:hover, .miniatura.activa {
+  opacity: 1;
+  border-color: #1d3557;
+}
+
+/* Controles */
+.controles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-control h3 {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.botones-color {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-color {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-color:hover {
+  background-color: #e9ecef;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #457b9d;
+}
+
+.info-modelo {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.btn-primario {
+  width: 100%;
+  padding: 12px;
+  background-color: #1d3557;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #457b9d;
+}
+
+/* Carrito */
+.seccion-carrito {
+  border-top: 2px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.seccion-carrito h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.lista-carrito {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.btn-eliminar {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.resumen-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-secundario {
+  background: transparent;
+  border: 1px solid #e63946;
+  color: #e63946;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.btn-secundario:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+.total-texto {
+  font-size: 1.2rem;
+  color: #1d3557;
+}

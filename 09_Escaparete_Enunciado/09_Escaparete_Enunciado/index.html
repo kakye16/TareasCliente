@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 · Escaparate Interactivo con Carrito</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="tienda-container">
+    <header class="tienda-header">
+      <h1>Sneaker Lab 👟</h1>
+      <p>Personaliza tus zapatillas y gestiona tu pedido</p>
+    </header>
+
+    <div class="panel-producto">
+      <!-- Visor de producto -->
+      <section class="visor">
+        <div class="imagen-contenedor">
+          <img id="imagen-principal"
+            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+            alt="Zapatilla principal">
+          <div id="placa-personalizada" class="placa">TU TEXTO</div>
+        </div>
+
+        <p class="instruccion-miniaturas">Elige modelo (Pasa el ratón para vista previa, haz clic para seleccionar):</p>
+        <div class="galeria-miniaturas">
+          <img class="miniatura activa"
+            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+            data-nombre="Runner Retro" data-precio="120" alt="Runner Retro">
+          <img class="miniatura"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+            data-nombre="Urban Fire" data-precio="140" alt="Urban Fire">
+          <img class="miniatura"
+            src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+            data-nombre="Pastel Street" data-precio="110" alt="Pastel Street">
+        </div>
+      </section>
+
+      <!-- Panel de controles -->
+      <section class="controles">
+        <div class="grupo-control">
+          <h3>1. Estilo / Filtro Visual</h3>
+          <div class="botones-color">
+            <button class="btn-color color-normal" data-filtro="none">Normal</button>
+            <button class="btn-color color-warm" data-filtro="sepia(0.8) hue-rotate(-30deg)">Cálido</button>
+            <button class="btn-color color-cyber" data-filtro="hue-rotate(180deg) saturate(2)">Cyber</button>
+            <button class="btn-color color-mono" data-filtro="grayscale(1) contrast(1.2)">Mono</button>
+          </div>
+        </div>
+
+        <div class="grupo-control">
+          <h3>2. Grabado Personalizado</h3>
+          <input type="text" id="campo-texto" placeholder="Escribe tu texto..." maxlength="12">
+        </div>
+
+        <div class="grupo-control">
+          <h3>3. Modelo Seleccionado</h3>
+          <p class="info-modelo"><strong id="nombre-modelo">Runner Retro</strong> — <span id="precio-modelo">120</span>
+            €</p>
+          <button id="btn-agregar-carrito" class="btn-primario">Añadir al Carrito 🛒</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sección de Carrito para manejo de Arrays -->
+    <section class="seccion-carrito">
+      <h2>Tu Carrito de Compras</h2>
+      <ul id="lista-carrito" class="lista-carrito">
+        <!-- Las filas del carrito se generan dinámicamente mediante JS -->
+      </ul>
+
+      <div class="resumen-carrito">
+        <button id="btn-vaciar-carrito" class="btn-secundario">Vaciar Carrito</button>
+        <p class="total-texto">Total Pedido: <strong id="total-carrito">0</strong> €</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

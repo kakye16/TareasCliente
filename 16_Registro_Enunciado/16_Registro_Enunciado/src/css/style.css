@@ -1,0 +1,33 @@
+﻿* { box-sizing: border-box; }
+:root { font-family: system-ui, sans-serif; color: #edf1f7; background: #11151c; }
+body { min-height: 100vh; margin: 0; padding: 32px 20px; display: grid; place-items: center; }
+main { width: min(100%, 420px); padding: 28px; border: 1px solid #394254; border-radius: 14px; background: #1b222e; }
+h1 { margin: 0; font-size: 1.8rem; }
+.intro, details { color: #bdc7d8; line-height: 1.5; }
+form { display: grid; margin-top: 28px; }
+label { margin-bottom: 8px; font-weight: 600; }
+input, button { font: inherit; }
+input { width: 100%; min-width: 0; border: 2px solid #617089; border-radius: 7px; padding: 12px; background: #11151c; color: inherit; }
+input[aria-invalid="true"] { border-color: #ff9c9c; }
+button { cursor: pointer; }
+input:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #9bbdff; outline-offset: 3px; }
+.password-field { position: relative; }
+.password-field input { padding-right: 54px; }
+.toggle-password { position: absolute; top: 3px; right: 3px; bottom: 3px; width: 44px; border: 0; border-radius: 5px; background: transparent; color: #c8d5ec; }
+.toggle-password svg { display: block; width: 24px; height: 24px; margin: auto; }
+.eye-slash { display: none; }
+.toggle-password[aria-pressed="true"] .eye-slash { display: block; }
+.error { min-height: 1.5em; margin: 5px 0 16px; color: #ffaaaa; }
+.submit { border: 0; border-radius: 7px; padding: 12px; background: #9bbdff; color: #101a2d; font-weight: 700; }
+#register-message { min-height: 1.5em; margin-bottom: 0; line-height: 1.5; }
+#register-message[data-state="error"] { color: #ffaaaa; }
+#register-message[data-state="success"] { color: #96e7b1; }
+details { margin-top: 24px; font-size: .9rem; overflow-wrap: anywhere; }
+summary { cursor: pointer; }
+code { color: #edf1f7; }
+@media (max-width: 360px) { main { padding: 20px; } }
+
+input[type=date] { color-scheme: dark; }
+#username-status { color: #96e7b1; }
+#username-status:not(:empty) { margin: -10px 0 16px; }
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Panel de Control Nuclear del Sector 7-G</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="consola">
+    <header class="panel-header">
+      <h1>El Panel de Control Nuclear del Sector 7-G</h1>
+      <h2 id="titulo-estado" aria-live="polite">ESTADO: NORMAL</h2>
+      <p class="subtitulo">Consola de Supervisión - Sector 7-G</p>
+    </header>
+    <main class="panel-pantalla">
+      <div class="pantalla-marco" tabindex="0" aria-label="Pantalla de mensajes" aria-describedby="ayuda-teclado">
+        <p id="pantalla-mensaje"></p>
+      </div>
+      <div class="camara-box">
+        <p>Cámara Sector 7-G</p>
+        <img id="foto-camara" src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Imagen de la cámara de vigilancia">
+      </div>
+    </main>
+    <p id="ayuda-teclado" class="ayuda">Escribe para mostrar un mensaje. Retroceso borra la última letra. Tras usar un control, pulsa la pantalla para seguir escribiendo.</p>
+    <footer class="panel-controles">
+      <div class="control-grupo">
+        <label for="selector-alerta">Nivel de Alerta:</label>
+        <select id="selector-alerta">
+          <option value="NORMAL">Normal</option>
+          <option value="PRECAUCIÓN">Precaución</option>
+          <option value="¡FUSIÓN INMINENTE!">¡Fusión Inminente!</option>
+        </select>
+      </div>
+      <div class="control-grupo">
+        <p>Añadir Símbolos de Seguridad:</p>
+        <label><input type="checkbox" class="check-icono" value="☢️"> Radiactivo (☢️)</label>
+        <label><input type="checkbox" class="check-icono" value="⚠️"> Peligro (⚠️)</label>
+        <label><input type="checkbox" class="check-icono" value="🍩"> Donut de Emergencia (🍩)</label>
+      </div>
+      <div class="control-grupo">
+        <button id="boton-fision" class="color-verde" type="button">NIVEL DE ENERGÍA</button>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13 · Tarjeta de crédito</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/index.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Tarjeta de crédito</h1>
+      <p>Simulando un pago.</p>
+    </header>
+    <button id="flip-card" type="button" aria-label="Girar tarjeta" aria-pressed="false">
+      <span class="flip-card-inner">
+        <span class="flip-card-front">
+          <span id="cardName">Tarjeta</span>
+          <img class="chip" src="./src/images/chip.png" alt="">
+          <span id="cardNumber-card">•••• •••• •••• ••••</span>
+          <span class="card-bottom">
+            <span><span id="expireDate-card">MM/AA</span><span id="username-card">NOMBRE DEL TITULAR</span></span>
+            <img id="logo-front" alt="" hidden>
+          </span>
+        </span>
+        <span class="flip-card-back">
+          <span id="magnetic-line"></span>
+          <span id="cvc-line">CVC: <span id="cvc-card">•••</span></span>
+          <span>Tarjeta ficticia para practicar JavaScript.</span>
+        </span>
+      </span>
+    </button>
+    <p class="hint">Pulsa la tarjeta para girarla.</p>
+    <form id="payment-form" novalidate autocomplete="off">
+      <label for="cardNumber">Número de tarjeta</label>
+      <input type="text" id="cardNumber" inputmode="numeric" aria-describedby="cardNumber-error">
+      <small id="cardNumber-error" class="error" aria-live="polite"></small>
+      <label for="username">Titular</label>
+      <input type="text" id="username" aria-describedby="username-error">
+      <small id="username-error" class="error" aria-live="polite"></small>
+      <label for="expireDate">Caducidad</label>
+      <input type="month" id="expireDate" aria-describedby="expireDate-error">
+      <small id="expireDate-error" class="error" aria-live="polite"></small>
+      <label for="cvc">CVC</label>
+      <input type="text" id="cvc" inputmode="numeric" aria-describedby="cvc-error">
+      <small id="cvc-error" class="error" aria-live="polite"></small>
+      <div class="actions"><button type="reset">Limpiar</button><button id="payButton" type="submit" disabled>Simular
+          pago</button></div>
+      <p id="form-message" role="status"></p>
+    </form>
+    <details>
+      <summary>Datos de prueba</summary>
+      <p>Mastercard: 5122233344455566<br>Visa: 4912345678123<br>American Express: 340001112223334<br>Titular: Ana López
+        · CVC: 123 · Caducidad: mes actual o posterior.</p>
+    </details>
+  </main>
+</body>
+
+</html>

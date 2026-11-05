@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codificador · Canal de escuadrón</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="contexto">Canal de escuadrón</p>
+      <h1>Codificador de mensajes</h1>
+      <p>Prepara el mensaje de tu próxima misión.</p>
+    </header>
+    <label for="mensaje">Mensaje</label>
+    <input id="mensaje" type="text" placeholder="Atacad la base" autocomplete="off">
+    <label for="clave">Clave numérica (1–99)</label>
+    <input id="clave" type="text" inputmode="numeric" value="7" autocomplete="off" aria-describedby="ayuda-clave">
+    <p id="ayuda-clave" class="ayuda">Introduce un número entero.</p>
+    <button id="codificar" type="button">Codificar mensaje</button>
+    <section class="salida" aria-labelledby="titulo-resultado" aria-live="polite" aria-atomic="true">
+      <h2 id="titulo-resultado">Resultado</h2>
+      <p class="estado"><span id="candado" aria-hidden="true">🔓</span> <span id="estado">Sin codificar</span></p>
+      <p id="resultado">Aquí aparecerá tu mensaje codificado.</p>
+    </section>
+  </main>
+</body>
+</html>

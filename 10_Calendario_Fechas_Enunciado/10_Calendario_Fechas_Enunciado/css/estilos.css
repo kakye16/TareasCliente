@@ -1,0 +1,22 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #edf7f8;
+  background: #10272c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: clamp(32px, 8vh, 72px) 20px; }
+main { max-width: 620px; margin: auto; }
+h1 { margin: 0 0 12px; font-size: clamp(1.6rem, 5vw, 2rem); }
+#referencia { margin: 0 0 28px; color: #b4d0d6; line-height: 1.6; }
+ul { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+li {
+  padding: 20px 24px;
+  border: 1px solid #35575e;
+  border-left: 4px solid #6ed5df;
+  border-radius: 0 12px 12px 0;
+  background: #19363c;
+}
+h2 { margin: 0 0 12px; font-size: 1.1rem; }
+li p { margin: 8px 0 0; line-height: 1.6; }
+.estado { color: #89e2eb; font-weight: 600; }

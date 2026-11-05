@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=MedievalSharp&family=Metamorphous&display=swap');
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'MedievalSharp', cursive, serif;
+background-color: #0d0a07;
+background-image:
+radial-gradient(circle at 50% 50%, rgba(20, 14, 9, 0.8), rgba(5, 3, 2, 0.95)),
+url('https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1920&q=80');
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+color: #e2d2b4;
+min-height: 100vh;
+padding: 30px 15px;
+display: flex;
+justify-content: center;
+}
+
+/* Marco Principal tipo Pergamino / Tablón de Gremio */
+.tienda-container {
+max-width: 1050px;
+width: 100%;
+background: #1c140e url('https://www.transparenttextures.com/patterns/aged-paper.png');
+border: 12px solid #3d2b1f;
+border-image: linear-gradient(to bottom, #8a623a, #3d2b1f, #1a100a) 1 100%;
+box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 40px rgba(0, 0, 0, 0.8);
+border-radius: 8px;
+padding: 35px;
+position: relative;
+}
+
+/* Adornos en esquinas */
+.pergamino-decoracion {
+position: absolute;
+width: 24px;
+height: 24px;
+border: 3px solid #d4af37;
+}
+
+.top-left { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+.top-right { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 6px; left: 6px; border-right: none; border-top: none; }
+.bottom-right { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+
+/* Encabezado */
+.tienda-header {
+text-align: center;
+margin-bottom: 25px;
+position: relative;
+}
+
+.titulo-marco {
+border-bottom: 2px solid #8a623a;
+padding-bottom: 15px;
+display: inline-block;
+width: 100%;
+}
+
+.tienda-header h1 {
+font-family: 'Cinzel', serif;
+font-weight: 900;
+color: #f3c669;
+font-size: 2.5rem;
+text-shadow: 2px 2px 4px #000, 0 0 10px rgba(243, 198, 105, 0.3);
+letter-spacing: 2px;
+}
+
+.subtitulo {
+font-family: 'Cinzel', serif;
+color: #b89768;
+font-style: italic;
+font-size: 1rem;
+margin-top: 5px;
+}
+
+/* Notificación UI */
+.banner-notificacion {
+padding: 12px 20px;
+border-radius: 6px;
+margin-bottom: 20px;
+font-weight: bold;
+text-align: center;
+font-size: 1.1rem;
+box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+border: 2px solid;
+}
+
+.banner-notificacion.exito {
+background: #14381e;
+color: #75f0a0;
+border-color: #2e8b57;
+}
+
+.banner-notificacion.error {
+background: #3b0f0f;
+color: #f88;
+border-color: #8b0000;
+}
+
+.banner-notificacion.oculto {
+display: none;
+}
+
+/* Edictos / Pregón del Reino */
+.banner-oferta {
+background: linear-gradient(90deg, #2a180e 0%, #4a2912 50%, #2a180e 100%);
+border: 2px solid #d4af37;
+border-radius: 6px;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+box-shadow: inset 0 0 15px rgba(0,0,0,0.7), 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.oferta-tag {
+font-family: 'Cinzel', serif;
+text-transform: uppercase;
+font-size: 0.95rem;
+font-weight: bold;
+color: #f3c669;
+margin-right: 10px;
+}
+
+#texto-oferta-dia {
+color: #fff8e7;
+font-size: 1.1rem;
+}
+
+/* Panel Hoja de Personaje */
+.panel-jugador {
+background: rgba(15, 10, 7, 0.7);
+padding: 18px 22px;
+border-radius: 8px;
+margin-bottom: 25px;
+border: 1px solid #5c4028;
+box-shadow: inset 0 0 10px #000;
+}
+
+.panel-jugador h2 {
+font-family: 'Cinzel', serif;
+font-size: 1.1rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #d4af37;
+margin-bottom: 12px;
+border-bottom: 1px dashed #5c4028;
+padding-bottom: 5px;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 15px;
+}
+
+.stat-box {
+background: #251a12;
+border: 1px solid #4a3423;
+padding: 10px 14px;
+border-radius: 6px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.stat-label {
+font-size: 0.95rem;
+color: #c4b097;
+}
+
+.stat-box strong {
+margin-left: auto;
+font-size: 1.2rem;
+font-family: 'Cinzel', serif;
+}
+
+.hp strong { color: #ff5555; text-shadow: 0 0 5px rgba(255,85,85,0.4); }
+.atk strong { color: #ffaa00; text-shadow: 0 0 5px rgba(255,170,0,0.4); }
+.def strong { color: #55aaaa; text-shadow: 0 0 5px rgba(85,170,170,0.4); }
+.oro strong { color: #55ff55; text-shadow: 0 0 5px rgba(85,255,85,0.4); }
+
+/* Controles de Entrada */
+.panel-controles {
+margin-bottom: 25px;
+}
+
+.form-busqueda {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+input[type="text"], select {
+background: #120c08;
+border: 2px solid #5c4028;
+color: #f3c669;
+padding: 10px 14px;
+border-radius: 6px;
+font-family: 'MedievalSharp', cursive;
+font-size: 1rem;
+outline: none;
+box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+}
+
+input[type="text"] { flex: 2; min-width: 220px; }
+select { flex: 1; min-width: 160px; cursor: pointer; }
+
+input[type="text"]::placeholder {
+color: #7a634e;
+}
+
+input:focus, select:focus {
+border-color: #d4af37;
+box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* Botón Estilo Medieval */
+.btn-medieval {
+background: linear-gradient(to bottom, #8a2be2, #4a0082);
+background: linear-gradient(to bottom, #b8860b, #704214);
+color: #fff8e7;
+border: 2px solid #ffd700;
+padding: 8px 16px;
+border-radius: 6px;
+font-family: 'Cinzel', serif;
+font-weight: 700;
+cursor: pointer;
+text-shadow: 1px 1px 2px #000;
+box-shadow: 0 3px 6px rgba(0,0,0,0.6);
+transition: all 0.2s;
+}
+
+.btn-medieval:hover {
+background: linear-gradient(to bottom, #d4af37, #8b5a2b);
+transform: translateY(-1px);
+box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+}
+
+/* Catálogo */
+.seccion-catalogo h2 {
+font-family: 'Cinzel', serif;
+font-size: 1.4rem;
+margin-bottom: 18px;
+color: #f3c669;
+border-bottom: 2px solid #5c4028;
+padding-bottom: 6px;
+}
+
+.catalogo-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+gap: 22px;
+}
+
+/* Tarjeta Estilo Marco Antiguo */
+.tarjeta-producto {
+background: #170f0a url('https://www.transparenttextures.com/patterns/dark-leather.png');
+border-radius: 8px;
+border: 3px solid #4a3423;
+padding: 16px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+transition: transform 0.2s, box-shadow 0.2s;
+box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+}
+
+.tarjeta-producto:hover {
+transform: translateY(-4px);
+}
+
+/* Rarezas */
+.tarjeta-producto.común {
+border-color: #8a8a8a;
+}
+.tarjeta-producto.rara {
+border-color: #3182ce;
+box-shadow: 0 0 10px rgba(49, 130, 206, 0.3);
+}
+.tarjeta-producto.legendaria {
+border-color: #d69e2e;
+box-shadow: 0 0 20px rgba(214, 158, 46, 0.5);
+}
+
+.producto-img-container {
+height: 130px;
+border-radius: 6px;
+overflow: hidden;
+background: #0a0604;
+border: 1px solid #3d2b1f;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+box-shadow: inset 0 0 10px #000;
+}
+
+.producto-img-container img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.9));
+}
+
+.producto-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.producto-nombre {
+font-family: 'Cinzel', serif;
+font-weight: 700;
+font-size: 1.05rem;
+color: #f3c669;
+}
+
+.badge-rareza {
+font-family: 'Cinzel', serif;
+font-size: 0.7rem;
+padding: 3px 7px;
+border-radius: 4px;
+text-transform: uppercase;
+font-weight: bold;
+border: 1px solid;
+}
+
+.común .badge-rareza { background: #2d3748; color: #cbd5e0; border-color: #718096; }
+.rara .badge-rareza { background: #1a365d; color: #90cdf4; border-color: #3182ce; }
+.legendaria .badge-rareza { background: #744210; color: #faf089; border-color: #d69e2e; }
+
+.producto-info {
+font-size: 0.95rem;
+color: #a89278;
+}
+
+.producto-bonus {
+color: #68d391;
+font-weight: bold;
+}
+
+.producto-footer {
+margin-top: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 10px;
+border-top: 1px dashed #3d2b1f;
+}
+
+.precio-contenedor {
+display: flex;
+flex-direction: column;
+}
+
+.precio-original {
+font-size: 0.8rem;
+color: #718096;
+text-decoration: line-through;
+}
+
+.producto-precio {
+font-family: 'Cinzel', serif;
+font-weight: 700;
+font-size: 1.2rem;
+color: #48bb78;
+}
+
+.btn-comprar {
+background: linear-gradient(to bottom, #2b6cb0, #1a365d);
+color: #ebf8ff;
+border: 1px solid #63b3ed;
+padding: 6px 14px;
+border-radius: 4px;
+cursor: pointer;
+font-family: 'Cinzel', serif;
+font-weight: bold;
+font-size: 0.85rem;
+box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+transition: all 0.2s;
+}
+
+.btn-comprar:hover {
+background: linear-gradient(to bottom, #3182ce, #2b6cb0);
+box-shadow: 0 0 8px rgba(99, 179, 237, 0.6);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Armería RPG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="tienda-container">
+    <header class="tienda-header">
+      <h1>🛡️ La Armería del Invocador</h1>
+      <p>Equipa a tu héroe para la siguiente incursión</p>
+    </header>
+
+    <!-- Banner de Notificaciones en UI (Remplaza alerts) -->
+    <div id="banner-notificacion" class="banner-notificacion oculto"></div>
+
+    <!-- Banner de Oferta del Día (Automática) -->
+    <section class="banner-oferta">
+      <div class="oferta-content">
+        <span class="oferta-tag">🔥 Oferta del Día:</span>
+        <strong id="texto-oferta-dia">Cargando oferta...</strong>
+      </div>
+      <button id="btn-nueva-oferta" class="btn-secundario">🎲 Cambiar Oferta</button>
+    </section>
+
+    <!-- Estado del Jugador -->
+    <section class="panel-jugador">
+      <h2>Estadísticas del Héroe</h2>
+      <div class="stats-grid">
+        <div class="stat-box hp">
+          <span class="stat-icon">❤️</span>
+          <span class="stat-label">Vida</span>
+          <strong id="stat-hp">1000</strong>
+        </div>
+        <div class="stat-box atk">
+          <span class="stat-icon">⚔️</span>
+          <span class="stat-label">Ataque</span>
+          <strong id="stat-atk">150</strong>
+        </div>
+        <div class="stat-box def">
+          <span class="stat-icon">🛡️</span>
+          <span class="stat-label">Defensa</span>
+          <strong id="stat-def">80</strong>
+        </div>
+        <div class="stat-box oro">
+          <span class="stat-icon">🪙</span>
+          <span class="stat-label">Dinero</span>
+          <strong id="stat-oro">150,00 €</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controles y Búsqueda -->
+    <section class="panel-controles">
+      <form id="form-busqueda" class="form-busqueda" onsubmit="event.preventDefault();">
+        <input type="text" id="input-buscar" placeholder="Buscar objeto por nombre...">
+
+        <select id="select-rareza">
+          <option value="todas">Todas las Rarezas</option>
+          <option value="Común">Común</option>
+          <option value="Rara">Rara</option>
+          <option value="Legendaria">Legendaria</option>
+        </select>
+      </form>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="seccion-catalogo">
+      <h2>Mercado de Objetos</h2>
+      <div id="contenedor-catalogo" class="catalogo-grid">
+        <!-- Tarjetas dinámicas generadas mediante JS -->
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
